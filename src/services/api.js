@@ -1,11 +1,6 @@
 import axios from "axios";
-// import { API_CONFIG } from "../config/api.config";
-import { formatMediaResponse } from "../utils/mediaFormatter";
 
-// const apiClient = axios.create({
-//   baseURL: API_CONFIG.baseURL,
-//   headers: API_CONFIG.headers
-// });
+import { formatMediaResponse } from "../utils/mediaFormatter";
 
 export const fetchInstagramContent = async (url) => {
   const options = {
@@ -22,10 +17,6 @@ export const fetchInstagramContent = async (url) => {
   };
 
   try {
-    // Updated endpoint to match the RapidAPI specification
-    // const response = await apiClient.get('/get-media', {
-    //   params: { url }
-    // });
     const response = await axios.request(options);
     console.log("data", response);
 

@@ -4,24 +4,20 @@ import { downloadMedia } from "../../utils/downloadHelper";
 
 const MediaItem = ({ item, index }) => (
   <div className="relative">
-    {/* <video
-      src={item.url}
-      className="w-full h-48 object-cover rounded-lg"
-      controls
-      controlsList="nodownload"
-    /> */}
     {item.type === "video" ? (
       <video
         src={item.url}
         className="w-full h-48 object-cover rounded-lg"
         controls
         controlsList="nodownload"
+        crossOrigin="anonymous"
       />
     ) : (
       <img
         src={item.url}
         alt={`Content ${index + 1}`}
         className="w-full h-48 object-cover rounded-lg"
+        crossOrigin="anonymous"
       />
     )}
     <button
